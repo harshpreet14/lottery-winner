@@ -3,7 +3,7 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "whop-proxy --command 'next dev --turbopack'",
+		"dev": "whop-proxy --command \"npx next dev --turbopack\"",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint"
@@ -12,7 +12,7 @@
 		"@vercel/functions": "^2.0.3",
 		"@whop/api": "^0.0.50",
 		"@whop/react": "0.2.36",
-		"next": "15.3.2",
+		"next": "^15.5.4",
 		"react": "^19.0.0",
 		"react-dom": "^19.0.0"
 	},
