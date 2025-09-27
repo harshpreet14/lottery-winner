@@ -1,0 +1,46 @@
+/* Lottery Wheel Animations */
+@keyframes spin-wheel {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(var(--final-rotation, 0deg));
+  }
+}
+
+.spin-wheel {
+  animation: spin-wheel 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Wheel gradient */
+:root {
+  --gradient-wheel: conic-gradient(
+    from 0deg,
+    #FF6B6B 0deg 36deg,
+    #4ECDC4 36deg 72deg,
+    #45B7D1 72deg 108deg,
+    #96CEB4 108deg 144deg,
+    #FFEAA7 144deg 180deg,
+    #DDA0DD 180deg 216deg,
+    #FFB347 216deg 252deg,
+    #FF69B4 252deg 288deg,
+    #20B2AA 288deg 324deg,
+    #87CEEB 324deg 360deg
+  );
+}
+
+/* Lottery button styles */
+.lottery-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.lottery-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.lottery-button:active:not(:disabled) {
+  transform: translateY(0);
+}
